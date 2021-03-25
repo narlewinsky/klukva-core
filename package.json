@@ -1,6 +1,6 @@
 {
     "name": "klukva-core",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Modulj perevoda teksta iz russkoj kirillicy v russkuju latinicu",
     "author": "Nar Lewinsky",
     "license": "MIT",
