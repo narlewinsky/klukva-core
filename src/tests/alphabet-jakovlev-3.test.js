@@ -25,27 +25,32 @@ const words = {
     'чёрт'  : 'cort',
     'ещё'   : 'jesco',
     'жук'   : 'ƶuk',
-    'быт'  : 'bьt',
-    'зёма'  : 'zɵma'
+    'быт'   : 'bьt',
+    'зёма'  : 'zɵma',
+    'рожь'  : 'roƶ',
+    'лишь'  : 'liş',
+    'дочь'  : 'doc',
+    'мощь'  : 'mosc',
+    'шью'   : 'şju'
 }
 
 const pangramms = {
     'Аэрофотосъёмка ландшафта уже выявила земли богачей и процветающих крестьян': 'Aerofotosjomka landşafta uƶe vьjavila zemli bogacej i proçvetajuscix krestjan',
-    'Съешь ещё этих мягких французских булок, да выпей же чаю': 'Sjeşj jesco etix məgkix françuzskix bulok, da vьpej ƶe caju'
+    'Съешь ещё этих мягких французских булок, да выпей же чаю': 'Sjeş jesco etix məgkix françuzskix bulok, da vьpej ƶe caju'
 };
 
-describe(`Proverka nabora osnovnьx pravil orfografii po sisteme "communist2"`, () => {
+describe(`Proverka nabora osnovnьx pravil orfografii po sisteme "jakovlev-3"`, () => {
     for (const source in words) {
         it(`Para slov: "${source}", "${words[source]}"`, () => {
-            assert.equal(latinize(source, "communist2"), words[source]);
+            assert.equal(latinize(source, "jakovlev-3"), words[source]);
         });
     }
 });
 
-describe(`Proverka pangramm po sisteme "communist2"`, () => {
+describe(`Proverka pangramm po sisteme "jakovlev-3"`, () => {
     for (const source in pangramms) {
         it(`Pangramma: "${source}", "${pangramms[source]}"`, () => {
-            assert.equal(latinize(source, "communist2"), pangramms[source]);
+            assert.equal(latinize(source, "jakovlev-3"), pangramms[source]);
         });
     }
 });
