@@ -1,5 +1,6 @@
 
 const alphabetKlukva = require('./maps/klukva.js');
+const alphabetModern = require('./maps/modern.js');
 const alphabetJakovlev1 = require('./maps/jakovlev-1.js');
 const alphabetJakovlev2 = require('./maps/jakovlev-2.js');
 const alphabetJakovlev3 = require('./maps/jakovlev-3.js');
@@ -33,6 +34,8 @@ function latinize(data, basedOn = 'modern') {
         case 'jakovlev-3':
             alphabet = alphabetJakovlev3;
             break;
+        case 'modern':
+            alphabet = alphabetModern;
         default:
     }
 
